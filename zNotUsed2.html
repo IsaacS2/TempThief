@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2 (Start room)</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="javascript.js"></script>
+
+    <script>
+        /*
+        x = 1;
+        y = 2;
+        z = x + y;
+
+        // alert("Hello World: " + z);
+
+        function timer() {
+            alert("this runs in a function");
+        }
+        */
+    </script>
+
+</head>
+
+<!--onclick='timer();'*/-->
+<!--onsubmit-->
+
+<body>
+    <a id = "garden" href="index2.html">other page<br></a>
+
+    <hi id = "additionValue" onclick='simpleAddition()'>get fifty!<br></hi>
+    <hi id = "click on me!" onclick='changeText(); changeCSS();'>click on me!<br></hi>
+    <hi onclick="clearKey();">Clear garden, reload index page</hi>
+
+</body>
+
+
+</html>
+
+<script>
+    console.log(window.sessionStorage);
+    //console.log(window);
+
+    // timer();
+
+    gardenCheck();
+
+    function changeCSS() {
+        console.log(document.querySelector("body").style);
+        document.querySelector("body").style.backgroundColor = "rgb(150, 200, 20)"
+    }
+
+    function simpleAddition() {
+        x = 30;
+        y = 20;
+        z = x + y;
+        document.getElementById("additionValue").innerHTML = z;
+
+        sessionStorage.setItem("additionValue", z);
+    }
+
+    function gardenCheck() {
+        gardenValue = sessionStorage.getItem('gardenRoute');
+        if (gardenValue == 'true') {
+            document.getElementById("garden").removeAttribute("href");
+            console.log("Hey it worked!");
+        }
+    }
+
+    function clearKey() {
+        sessionStorage.removeItem("gardenRoute");
+        console.log(window.sessionStorage);
+        window.location.href = "practice.html"
+    }
+</script>

@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@100&family=Shizuru&display=swap');
+
+body{
+    
+    background-color: rgb(77, 77, 77);
+        
+    background-image: linear-gradient(rgb(77, 77, 77), black);
+
+    background-size: 100%;
+    
+    
+    margin-left:2%;
+    margin-right:2%;
+    margin-top:2%;
+    margin-bottom: 8%;
+    font-family: 'Roboto Serif', sans-serif;
+}
+
+
+a:link{
+    
+    text-decoration:none;
+    color: whitesmoke;
+}
+
+a{
+    margin-right: 5%;
+    color: whitesmoke;
+    /* border: 5%;
+    border-style: solid;
+    border-color: rgb(5, 5, 24); */
+}
+
+h2{
+    color: whitesmoke;
+    font-size: 175%;
+    margin-bottom: -1%;
+    margin-left: 5%;
+    margin-top: 0.5%;
+}
+
+p{
+    color:rgb(9, 49, 49);
+}
+
+p.underlinedText{
+    text-decoration:underline;
+    text-align:right;
+}
+
+h1{
+    color: whitesmoke;
+    font-size: 175%;
+    margin-bottom: -1%;
+    margin-left: 35%;
+    margin-top: 0.5%;
+}
+
+h3{
+    color: whitesmoke;
+    margin-left: 35%;
+}
+
+h1.search{
+    border-style:ridge;
+    border-radius: 5px 5px 5px 5px;
+    color:grey;
+}
+
+input{
+    width: 3%;
+}
+
+div{
+    color: whitesmoke;
+    border: 10%;
+    border-style: solid;
+    border-color: rgb(4, 4, 88);
+    padding: 2%;
+    padding-right: 2%;
+    margin-bottom: 2%;
+    
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    height:auto;
+    align-self: center;
+    margin-top: 1%;
+}
+
+form {
+    width: 30%;
+    height: auto;
+    margin-top: 1%;
+    margin-left: 35%;
+    color: whitesmoke;
+}

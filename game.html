@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2 (Game room)</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="javascript.js"></script>
+
+    <style>
+        body {
+            background-color: rgb(77, 77, 77);
+            
+            background-image: linear-gradient(rgb(77, 77, 77), black);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id = "option menu"> 
+        <a class = "opt1" id = "firstChoice" onclick = "gruntDoor();">[Tell Grunt to blow up door]</a>
+        <a class = "opt2" id = "secondChoice" onclick = "lookAround();">[Look around]</a>
+        <a class = "opt3" id = "thirdChoice" onclick = "talk();">[Talk]</a>
+        <a class = "opt4" id = "fourthChoice"></a>
+        <a class = "opt5" id = "fifthChoice"></a>
+    </div>
+
+    <h2 id = "timerVal"> Time until feds show: 120 </h1>
+    <img src = "vault.jpg">
+<!--
+    <form onsubmit="myFunction()">
+        Enter Code (3, 2-digit numbers, separated by '-'): <input type="text">
+        <input type = "submit">
+    </form>
+-->
+    
+    <h1 id = "textToChange">I think the code is...</h1>
+
+    <h3> Enter here: <input type = "text" id = "text"> - <input type = "text" id = "text2"> - <input type = "text" id = "text3"> </h3>
+</body>
+
+
+</html>
+
+<script>
+    input = document.getElementById("text");
+    input2 = document.getElementById("text2");
+    input3 = document.getElementById("text3");
+
+    window.addEventListener("keypress", (event)=> {
+        if (event.keyCode === 13) {
+            console.log("OK");
+            event.preventDefault();
+            value = document.getElementById("text").value;
+            value2 = document.getElementById("text2").value;
+            value3 = document.getElementById("text3").value;
+
+        if (value === xtext && value2 === ytext && value3 === ztext) {
+            document.getElementById("textToChange").innerHTML = "Nice! The money's ours!";
+            console.log("Yes");
+            vaultOpen();
+        } else {
+            document.getElementById("textToChange").innerHTML = "Drats, it didn't work!";
+            console.log("No");
+        }
+        document.getElementById("text").value = "";
+        document.getElementById("text2").value = "";
+        document.getElementById("text3").value = "";
+    }
+    });
+
+    initialTimer();
+    timer();
+
+    function initialTimer() {
+        sessionStorage.setItem("rateOfTimer", "1000");
+        sessionStorage.setItem("counter", "120");
+    }
+
+    console.log(window.document.all);
+    console.log(document.forms);
+    
+</script>
